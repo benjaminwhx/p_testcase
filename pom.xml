@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>junit</module>
+        <module>junit4</module>
     </modules>
 
     <properties>
