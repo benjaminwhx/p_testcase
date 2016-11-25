@@ -4,26 +4,29 @@ import com.jd.bt.AbstractTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import static org.hamcrest.CoreMatchers.*;
 
 import java.util.Arrays;
-
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
 
 /**
  * User: 吴海旭
  * Date: 2016-11-24
  * Time: 下午7:40
+ * 使用自定义参数RunnerFactory
  */
 @RunWith(Parameterized.class)
-public class ValidEmailTest2 extends AbstractTest {
+@Parameterized.UseParametersRunnerFactory(MyRunnerFactory.class)
+public class ParameterizedTest2 extends AbstractTest {
 
-    @Parameterized.Parameter
-    public String email;
-    @Parameterized.Parameter(1)
-    public boolean expected;
+    private final String email;
+    private final boolean expected;
 
-    // name属性我暂时没发现有什么用，如果有用可以给我提issue
+    public ParameterizedTest2(String email, boolean expected) {
+        this.email = email;
+        this.expected = expected;
+    }
+
+    // name 我暂时没发现有什么用，如果有用可以给我提issue
     @Parameterized.Parameters(name = "{index}: isValid({0})={1}")
     public static Iterable<Object[]> prepareData() {
         return Arrays.asList(new Object[][]{
