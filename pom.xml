@@ -11,6 +11,7 @@
     <modules>
         <module>junit4</module>
         <module>spring4-junit4</module>
+        <module>powermock</module>
     </modules>
 
     <properties>
@@ -18,6 +19,7 @@
         <jdk.version>1.8</jdk.version>
         <spring.version>4.2.6.RELEASE</spring.version>
         <jackson.version>2.8.4</jackson.version>
+        <powermock.version>1.6.6</powermock.version>
     </properties>
 
     <dependencyManagement>
@@ -141,6 +143,29 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>5.1.36</version>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-easymock</artifactId>
+                <version>${powermock.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.easymock</groupId>
+                <artifactId>easymock</artifactId>
+                <version>3.4</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
