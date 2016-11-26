@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE guzz-configs PUBLIC "-//GUZZ//DTD MAIN CONFIG//EN" "http://www.guzz.org/dtd/guzz.dtd">
+
+<guzz-configs>
+
+	<dialect class="org.guzz.dialect.Mysql5Dialect" />
+
+	<tran locator="spring">
+		<dbgroup name="default" masterDBConfigName="masterDB" />
+	</tran>
+
+	<!--<import resource="classpath:/sqls/defaultSqls.xml" />-->
+
+	<config-server>
+		<server class="org.guzz.config.LocalFileConfigServer">
+			<param name="resource" value="classpath:configs/guzz.properties" />
+		</server>	
+	</config-server>
+
+	<business-scan dbgroup="default" resources="classpath*:com/jd/bt/model/*.class" />
+</guzz-configs>
