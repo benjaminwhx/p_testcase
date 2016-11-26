@@ -1,11 +1,9 @@
-package com.jd.bt;
+package com.jd.bt.transactional;
 
 import com.jd.bt.manager.IUserManager;
 import com.jd.bt.model.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
 /**
  * User: 吴海旭
