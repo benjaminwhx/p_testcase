@@ -1,4 +1,4 @@
-package com.jd.bt.transactional;
+package com.jd.bt.junit4.transactional;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

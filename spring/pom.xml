@@ -6,9 +6,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>spring4-junit4</artifactId>
+    <artifactId>spring</artifactId>
     <packaging>war</packaging>
-    <name>spring4-junit4 Maven Webapp</name>
+    <name>spring Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -99,6 +99,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>spring4-junit4</finalName>
+        <finalName>spring</finalName>
     </build>
 </project>
