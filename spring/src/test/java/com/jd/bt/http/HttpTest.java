@@ -12,7 +12,7 @@ public class HttpTest {
 
     @Test
     public void testGetUserById() {
-        String url = "http://localhost:8080/user/1";
+        String url = "http://localhost:8080/main/1";
         String result = HttpClientUtils.sendGetRequest(url);
         Assert.assertNotNull(result);
         // {"id":1,"name":"yiibai","dept":"Tech","website":"http://www.yiibai.com","phone":"13800009988"}
