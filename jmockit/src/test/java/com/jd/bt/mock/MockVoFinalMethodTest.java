@@ -18,6 +18,8 @@ public class MockVoFinalMethodTest {
 
         new StrictExpectations() {{
             mockVo.isAlive();
+
+//            withArgThat(new )
             result = true;
         }};
 
