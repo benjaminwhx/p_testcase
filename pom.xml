@@ -12,6 +12,7 @@
         <module>junit4</module>
         <module>spring</module>
         <module>powermock</module>
+        <module>jmockit</module>
     </modules>
 
     <properties>
@@ -23,10 +24,25 @@
         <httpclient.version>4.5.2</httpclient.version>
         <jsonpath.version>0.9.0</jsonpath.version>
         <jackson2.version>2.2.3</jackson2.version>
+        <jmockit.version>1.19</jmockit.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.jmockit</groupId>
+                <artifactId>jmockit</artifactId>
+                <version>${jmockit.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.6.0</version>
+                <scope>test</scope>
+            </dependency>
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
