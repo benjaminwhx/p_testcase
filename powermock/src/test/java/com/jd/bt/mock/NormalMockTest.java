@@ -26,4 +26,13 @@ public class NormalMockTest {
         boolean mockResult = mock.callArguementInstance(mockFile);
         Assert.assertTrue(mockResult);
     }
+
+    /**
+     * 测试没有返回值的方法
+     */
+    @Test
+    public void testNoReturnMethod() throws Exception {
+        Mock mock = PowerMockito.mock(Mock.class);
+        PowerMockito.doNothing().when(mock, "doNothing");
+    }
 }

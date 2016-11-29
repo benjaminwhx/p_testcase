@@ -28,10 +28,10 @@ public class MockVoSystemFinalAndStaticMethodTest {
     }
 
     @Test
-    public void testName(@Mocked System system) throws Exception {
+    public void testName() throws Exception {
 
         // mockVo system static
-        new StrictExpectations() {{
+        new StrictExpectations(System.class) {{
             System.getProperty("aaa");
             result = "bbb";
             times = 1;// verify 调用了1次
