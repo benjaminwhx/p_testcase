@@ -27,12 +27,4 @@ public class MockPrivateMethodTest extends AbstractMockRunner {
         Assert.assertTrue(mock.callPrivateMethod());
     }
 
-    @Test
-    public void testPrivateMethod2() {
-        Mock mock = new Mock();
-
-        MemberModifier.stub(MemberMatcher.method(Mock.class, "isPublic")).toReturn(true);
-
-        Assert.assertTrue(mock.callPrivateMethod());
-    }
 }

@@ -32,6 +32,18 @@ public class Mock {
         return false;
     }
 
+    public String getDesc(String name) {
+        return name + " call this method";
+    }
+
+    public static String replaceMethod1(String name) {
+        return "replace1";
+    }
+
+    public static String replaceMethod2(String name) {
+        return "replace2";
+    }
+
     public static boolean isMan() {
         return false;
     }
