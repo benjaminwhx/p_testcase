@@ -6,6 +6,7 @@ import static org.powermock.api.mockito.PowerMockito.*;
 
 import org.mockito.Mockito;
 import org.mockito.verification.Timeout;
+import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
 /**
@@ -16,10 +17,15 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 @PrepareForTest(Mock.class)
 public class VerifyTest extends AbstractMockRunner{
 
+    /**
+     * Mockito的verify正常运行
+     * @throws Exception
+     */
     @Test
-    public void testVerify() throws Exception {
+    public void testMockitoVerify() throws Exception {
         Mock mock = mock(Mock.class);
         when(mock, "getAge").thenAnswer(a -> {
+            Thread.sleep(200);
             return 10;
         });
         Assert.assertEquals(10, mock.getAge());
@@ -44,7 +50,35 @@ public class VerifyTest extends AbstractMockRunner{
         Mockito.verifyNoMoreInteractions(mock);
         Mockito.verifyZeroInteractions(mock);   // 同上
 
-        // 验证100ms内执行完毕
+        /**
+         * 验证100ms内执行完毕
+         * 在这段代码里面,无论执行多久下面的代码都会执行通过
+         * 原因参考: http://stackoverflow.com/questions/31398021/how-does-mockito-timeout-work
+         * {@link TimeoutTest}
+         */
         Mockito.verify(mock, Mockito.timeout(100)).getAge();
+    }
+
+    /**
+     * PowerMockito的verify有问题,不建议使用。如果错误请指出
+     * @throws Exception
+     */
+    @Test
+    public void testPowerMockitoVerify() throws Exception {
+        Mock mock = mock(Mock.class);
+        when(mock, "getAge").thenAnswer(a -> {
+            Thread.sleep(200);
+            return 10;
+        });
+        Assert.assertEquals(10, mock.getAge());
+        // 验证自己的方法是否被调用1次
+        PowerMockito.verifyPrivate(mock, Mockito.times(1)).invoke("getAge");
+
+        // TODO error
+        PowerMockito.verifyStatic(Mockito.times(0));
+
+        // TODO error
+        PowerMockito.verifyNoMoreInteractions(Mock.class);
+
     }
 }
