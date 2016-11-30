@@ -1,10 +1,9 @@
 package com.jd.bt.mock;
 
+import com.jd.bt.mock.parent.AbstractMockRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.powermock.api.mockito.PowerMockito;
-import org.powermock.api.support.membermodification.MemberMatcher;
-import org.powermock.api.support.membermodification.MemberModifier;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
 /**

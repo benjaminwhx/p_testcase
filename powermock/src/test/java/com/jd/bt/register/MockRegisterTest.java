@@ -1,6 +1,6 @@
 package com.jd.bt.register;
 
-import com.jd.bt.mock.AbstractMockRunner;
+import com.jd.bt.mock.parent.AbstractMockRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.powermock.api.mockito.PowerMockito;

@@ -1,5 +1,6 @@
 package com.jd.bt.mock;
 
+import com.jd.bt.mock.parent.AbstractMockRunner;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;

@@ -1,11 +1,11 @@
 package com.jd.bt.mock;
 
+import com.jd.bt.mock.parent.AbstractMockRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import static org.powermock.api.mockito.PowerMockito.*;
 
 import org.mockito.Mockito;
-import org.mockito.verification.Timeout;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
@@ -15,7 +15,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
  * Time: 下午7:58
  */
 @PrepareForTest(Mock.class)
-public class VerifyTest extends AbstractMockRunner{
+public class VerifyTest extends AbstractMockRunner {
 
     /**
      * Mockito的verify正常运行
