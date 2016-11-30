@@ -26,3 +26,6 @@
   ├── junit4          // spring项目中配合使用junit4来测试service方法以及dao方法
   ├── mock            // spring项目中配合使用mock来测试controller的方法
 ```
+
+文章大部分代码都是参考的官方文档，可以自行查看。
+推荐文章：[hotdog](http://hotdog.iteye.com/category/143340)
