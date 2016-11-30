@@ -28,7 +28,7 @@ public class RegisterController {
         }
 
         // 真正的注册流程
-        boolean registerSuccess = register(registerDTO.getUserName(), registerDTO.getPassword());
+        boolean registerSuccess = reg(registerDTO.getUserName(), registerDTO.getPassword());
         if (!registerSuccess) {
             System.out.println("注册失败");
             return "failed";
@@ -44,12 +44,12 @@ public class RegisterController {
         return redisService.get().equals(imageCode);
     }
 
-    private boolean verifyPhoneCode(String phoneCode) {
+    public boolean verifyPhoneCode(String phoneCode) {
         System.out.println("验证短信码");
         return true;
     }
 
-    private boolean register(String userName, String password) {
+    public boolean reg(String userName, String password) {
         System.out.println("注册");
         return true;
     }

@@ -17,6 +17,7 @@ public class MockVoSystemFinalAndStaticMethodTest {
         // mockVo system final
 
         new StrictExpectations() {{
+            System.out.println(mockStr);
             mockStr.isEmpty();
             result = true;
 

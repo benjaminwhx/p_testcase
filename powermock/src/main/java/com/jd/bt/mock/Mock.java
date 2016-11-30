@@ -9,6 +9,12 @@ import java.io.File;
  */
 public class Mock {
 
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
     public void doNothing() {
         System.out.println("do nothing");
     }

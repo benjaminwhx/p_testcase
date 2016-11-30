@@ -46,6 +46,15 @@ public class MockRegisterTest extends AbstractMockRunner {
         Assert.assertEquals("success", result);
     }
 
+    @Test
+    public void testRegister3() throws Exception {
+        RegisterDTO registerDTO = constructInstance();
+        RegisterController mockController = PowerMockito.mock(RegisterController.class);
+        PowerMockito.when(mockController, "register", registerDTO).thenCallRealMethod();
+        System.out.println(mockController.reg("", ""));
+        System.out.println(mockController.verifyPhoneCode(""));
+    }
+
     private RegisterDTO constructInstance() {
         RegisterDTO registerDTO = new RegisterDTO();
         registerDTO.setUserName("benjamin");
