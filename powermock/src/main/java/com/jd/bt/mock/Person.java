@@ -14,10 +14,23 @@ public class Person {
 
     }
 
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     private Person(String name, int age, Father father) {
         this.name = name;
         this.age = age;
         this.father = father;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public String hello() {
@@ -29,6 +42,6 @@ public class Person {
     }
 
     public String toString() {
-        return name + "->" + age + "->" + father.getName();
+        return name + "->" + age + "->" + (father != null ? father.getName() : null);
     }
 }
