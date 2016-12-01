@@ -1,9 +1,8 @@
 package com.jd.bt.register;
 
-import com.jd.bt.mock.AbstractMockRunner;
+import com.jd.bt.mock.parent.AbstractMockRunner;
 import org.junit.Assert;
 import org.junit.Test;
-import org.powermock.api.easymock.PowerMock;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
@@ -32,18 +31,12 @@ public class MockRegisterTest extends AbstractMockRunner {
     }
 
     @Test
-    public void testRegister2() throws Exception {
+    public void testRegister3() throws Exception {
         RegisterDTO registerDTO = constructInstance();
-        RegisterController mockController = PowerMock.createPartialMock(RegisterController.class, "verifyImageCode");
-        // 调用register方法的时候,它调用了此类的其他方法(verifyImageCode),得使用expectPrivate
-        PowerMock.expectPrivate(mockController, "verifyImageCode", "1234").andAnswer(() -> {
-            System.out.println("验证图形码成功");
-            return true;
-        });
-        PowerMock.replay(mockController);
-
-        String result = mockController.register(registerDTO);
-        Assert.assertEquals("success", result);
+        RegisterController mockController = PowerMockito.mock(RegisterController.class);
+        PowerMockito.when(mockController, "register", registerDTO).thenCallRealMethod();
+        System.out.println(mockController.reg("", ""));
+        System.out.println(mockController.verifyPhoneCode(""));
     }
 
     private RegisterDTO constructInstance() {

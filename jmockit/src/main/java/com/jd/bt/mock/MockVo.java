@@ -1,6 +1,8 @@
 package com.jd.bt.mock;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * User: 吴海旭
@@ -24,6 +26,16 @@ public class MockVo {
 
     public static boolean isMan() {
         return false;
+    }
+
+    public static final String getCurrentDateByFormat(int type) {
+        if (type == 1) {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            return sdf.format(new Date());
+        } else {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return sdf.format(new Date());
+        }
     }
 
     public boolean callPrivateMethod() {

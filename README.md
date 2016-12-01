@@ -21,8 +21,17 @@
   ├── mock            // powermock的一些特性
   ├── register        // 基于mock来理解一下在项目中的实际作用
   
+├── jmockit           // mock操作
+  ├── mock            // jmockit的一些特性
+  ├── register        // 基于mock来理解一下在项目中的实际作用
+  
 ├── spring            // spring项目中如何进行测试
   ├── http            // spring项目中使用http来测试结果
   ├── junit4          // spring项目中配合使用junit4来测试service方法以及dao方法
   ├── mock            // spring项目中配合使用mock来测试controller的方法
 ```
+
+文章大部分代码都是参考的官方文档，可以自行查看。  
+推荐文章：[hotdog](http://hotdog.iteye.com/category/143340)  
+[powermock入门介绍及使用案例](http://blog.csdn.net/rainbow702/article/details/51783285)  
+[使用Powermock实现单元测试，提高单元测试覆盖率](http://blog.csdn.net/highth/article/details/42497269)

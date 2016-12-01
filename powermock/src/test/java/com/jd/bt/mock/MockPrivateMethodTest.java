@@ -1,5 +1,6 @@
 package com.jd.bt.mock;
 
+import com.jd.bt.mock.parent.AbstractMockRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.powermock.api.mockito.PowerMockito;
@@ -11,10 +12,10 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
  * Time: 下午8:44
  * Mock私有方法
  */
+@PrepareForTest(Mock.class)
 public class MockPrivateMethodTest extends AbstractMockRunner {
 
     @Test
-    @PrepareForTest(Mock.class)
     public void testPrivateMethod() throws Exception {
         Mock mock = PowerMockito.mock(Mock.class);
 
@@ -24,4 +25,5 @@ public class MockPrivateMethodTest extends AbstractMockRunner {
 
         Assert.assertTrue(mock.callPrivateMethod());
     }
+
 }
