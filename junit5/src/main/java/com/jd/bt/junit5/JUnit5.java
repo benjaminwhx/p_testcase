@@ -5,5 +5,5 @@ package com.jd.bt.junit5;
  * Date: 2016-12-02
  * Time: 下午3:39
  */
-public class JUnit5Test {
+public class JUnit5 {
 }
