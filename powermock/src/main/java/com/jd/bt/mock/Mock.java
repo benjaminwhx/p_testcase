@@ -24,6 +24,10 @@ public class Mock {
         return file.exists();
     }
 
+    public boolean sendEmail(String userName, String password) {
+        return false;
+    }
+
     public boolean callArguementInstance(File file) {
         return file.exists();
     }

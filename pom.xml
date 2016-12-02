@@ -13,6 +13,7 @@
         <module>spring</module>
         <module>powermock</module>
         <module>jmockit</module>
+        <module>assertj</module>
     </modules>
 
     <properties>
@@ -25,6 +26,7 @@
         <jsonpath.version>0.9.0</jsonpath.version>
         <jackson2.version>2.2.3</jackson2.version>
         <jmockit.version>1.19</jmockit.version>
+        <assertj.version>3.6.1</assertj.version>
     </properties>
 
     <dependencyManagement>
@@ -217,6 +219,12 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

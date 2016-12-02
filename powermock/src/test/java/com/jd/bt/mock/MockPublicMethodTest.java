@@ -24,17 +24,15 @@ public class MockPublicMethodTest extends AbstractMockRunner {
     @Test
     public void testMethod1() {
         Mock mock = mock(Mock.class);
-        // 1、when -> thenAnswer
-//        when(mock.getDesc("benjamin")).thenAnswer(invocation -> {
-//            return "My name is Benjamin";
-//        });
-
-        // 2、doAnswer -> when
-        doAnswer(invocation -> {
-            return "My name is Benjamin";
-        }).when(mock).getDesc("benjamin");
-
+        when(mock.getDesc("benjamin")).thenReturn("My name is Benjamin");
         Assert.assertEquals("My name is Benjamin", mock.getDesc("benjamin"));
+    }
+
+    @Test
+    public void testSendEmail() {
+        Mock mock = mock(Mock.class);
+        when(mock.sendEmail("aa", "bb")).thenCallRealMethod();
+        Assert.assertTrue(mock.sendEmail("aa", "bb"));
     }
 
     /**
