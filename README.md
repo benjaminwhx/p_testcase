@@ -23,6 +23,8 @@
   ├── rule            // junit4的新特性-rule，定义了一些规则
   ├── suit            // junit4的新特性-suit，可以指定多个测试类一起运行
   ├── theories        // junit4的新特性-theories，可以对测试类需要的参数进行推测，从而提供随机性参数
+
+├── junit5            // junit5的一些新特性(待补充)
   
 ├── powermock         // mock操作
   ├── mock            // powermock的一些特性
