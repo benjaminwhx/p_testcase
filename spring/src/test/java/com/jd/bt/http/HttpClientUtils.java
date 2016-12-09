@@ -103,6 +103,28 @@ public class HttpClientUtils {
     }
 
     /**
+     * 发送json数据post请求
+     * @param requestUrl
+     * @param json
+     * @return
+     */
+    public static String sendPostJsonRequest(String requestUrl, String json) {
+        String content = "";
+        try {
+            HttpResponse response = Request.Post(requestUrl)
+                    .connectTimeout(DEFAULT_TIMEOUT)
+                    .socketTimeout(DEFAULT_TIMEOUT)
+                    .bodyString(json, ContentType.APPLICATION_JSON)
+                    .execute().returnResponse();
+            content = decode(response);
+        } catch (Exception ex) {
+            logger.error("post request error,url={}", requestUrl, ex);
+        } finally {
+            return content;
+        }
+    }
+
+    /**
      * 上传文件和参数
      *
      * @param requestUrl
