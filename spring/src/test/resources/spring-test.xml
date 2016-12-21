@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        下面是项目中的例子，这里可以根据自己的需求来加入配置文件和类
+        如果系统中用到了dubbo jsf之类的，可以单独定义一个配置文件然后import进来
+    -->
+
+    <!--<import resource="classpath:jsf/jsf-loandecision-test.xml"/>-->
+    <!--<import resource="classpath:spring/spring-config-merchantBizConfig.xml" />-->
+    <!--<import resource="classpath:config/spring-config-erp.xml" />-->
+    <!--<import resource="classpath:config/spring-config-ump.xml" />-->
+
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.bizaccount.BizQueryRpc" />-->
+
+    <!--<bean id="merchantBizConfigService" class="com.jd.jr.cf.bizservice.service.config.MerchantBizConfigServiceImpl" />-->
+    <!--<bean id="userApplyRpc" class="com.jd.jr.cf.bizservice.rpc.user.UserApplyRpc" />-->
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.bt.BtRpc" />-->
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.user.BtplusOverdueRpc" />-->
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.jrdata.JrDataRpc" />-->
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.bt.BtFrontRpc" />-->
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.bt.UserTaskRpc" />-->
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.statistics.BusinessStepLogRpc" />-->
+    <!--<bean class="com.jd.jr.cf.bizservice.rpc.bt.BaitiaoRealnameResourceRpc" />-->
+</beans>
